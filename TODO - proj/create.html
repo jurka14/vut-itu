@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+        /*
+         Vytvořil: Vojtěch Jurka (xjurka08) + konzultace zbytku týmu
+        */
+        /* Style the body */
+        body {
+        font-family: Arial;
+        margin: 0;
+        }
+        
+        .date {
+          font-size: 50;
+          font-style: oblique;
+        }
+        .item{
+            width:380px;
+            height: 45px;
+            min-height: 45px;
+            position: relative;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            list-style: none;
+            padding: 5;
+            margin:0;
+        }
+        
+        .header {
+        padding: 5px;
+        text-align:left;
+        text-emphasis: pad;
+        background: #404040;
+        color: #ff6600;
+        }
+        .item p.text{
+            position: absolute;
+            padding:0;
+            margin:0;
+            font-size: 20px;
+            left:50px;
+            top:5px;
+            background-color: #FFF;
+            max-width:285px;
+        }
+        
+        #date{
+            font-size: 25px;
+            font-family: 'Titillium Web', sans-serif;
+        }
+        
+        .lineThrough{
+            text-decoration: line-through;
+            color : #ccc;
+        }
+        
+        .row {  
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+        flex: 10%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+        flex: 80%;
+        background-color: white;
+        padding: 20px;
+        }
+        .icon {
+            display: inline-block;
+            text-indent: -9999px;
+            width: 28px;
+            height: 28px;
+    }
+
+
+        .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+        }
+
+        @media screen and (max-width: 700px) {
+        .row, .navbar {   
+            flex-direction: column;
+        }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<!-- Header -->
+<div class="header">
+  <h1>TODO APP</h1>
+</div>
+
+
+
+<div>
+    <div>
+    <h2 style="margin-left: 10px">NICK:</h2>
+    <form style="margin-left: 10px"><input type="text" placeholder="Nickname..."></form>
+    </div>
+
+    <div>
+    <h2 style="margin-left: 10px">PASSWORD:</h2>
+    <form style="margin-left: 10px"><input type="password" placeholder="Password..."></form>
+    </div>
+    <br>
+    <div>
+      <form action="todo.html">
+      <input style="margin-left:10px;background-color:#404040;color:#ff6600;" type="submit" value="SIGN UP" />
+      </form>
+    </div>
+    
+    <br>
+    
+
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>ITU: xjurka08, xkremp01, xkrejc68</h2>
+</div>
+</body>

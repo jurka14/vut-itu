@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO</title>
+    <script src="/app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+        /*
+        Vytvořil: Vojtěch Krejčík, Samuel Krempaský (xkremp01 + xkrejc68) + konzultace zbytku týmu
+        */
+        /* Style the body */
+        body {
+        font-family: Arial;
+        margin: 0;
+        }
+
+        .date {
+          font-size: 50;
+          font-style: oblique;
+        }
+        .item{
+            width:380px;
+            height: 45px;
+            min-height: 45px;
+            position: relative;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            list-style: none;
+            padding: 5;
+            margin:0;
+        }
+
+        .sidebar_item{
+            width:180px;
+            height: 35px;
+            min-height: 30px;
+            position: relative;
+            border-bottom: 2px solid rgba(255,255,255,1);
+            list-style: none;
+            padding: 5;
+            margin: 0;
+        }
+
+        .header {
+        padding: 5px;
+        text-align:left;
+        text-emphasis: pad;
+        background: #404040;
+        color: #ff6600;
+        }
+        .item p.text{
+            position: absolute;
+            padding:0;
+            margin:0;
+            font-size: 20px;
+            left:50px;
+            top:5px;
+            background-color: #FFF;
+            max-width:285px;
+        }
+        .sidebar_item p.text{
+            position: absolute;
+            padding:0;
+            margin:0;
+            font-size: 20px;
+            left:0px;
+            top:5px;
+            background-color: #f1f1f1;
+            max-width:167px;
+        }
+
+        #date{
+            font-size: 25px;
+            font-family: 'Titillium Web', sans-serif;
+        }
+
+        .lineThrough{
+            text-decoration: line-through;
+            color : #ccc;
+        }
+
+        .row {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+        flex: 10%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        }
+
+        a:link {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        /* visited link */
+        a:visited {
+            color: #ff6600;
+            text-decoration: none;
+
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: #ff6600;
+            text-decoration: none;
+
+        }
+
+        /* selected link */
+        a:active {
+            color: #ff6600;
+            text-decoration: none;
+
+        }
+
+        /* Main column */
+        .main {
+        flex: 80%;
+        background-color: white;
+        padding: 20px;
+        }
+        .icon {
+            display: inline-block;
+            text-indent: -9999px;
+            width: 28px;
+            height: 28px;
+    }
+
+
+        .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+        }
+
+        @media screen and (max-width: 700px) {
+        .row, .navbar {
+            flex-direction: column;
+        }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<!-- Header -->
+<div class="header">
+  <h1>TODO APP</h1>
+</div>
+
+
+
+<div class="row">
+  <!-- xkremp01 sidebar -->
+
+  <div class="side">
+    <h2>User:</h2>
+    <div style="font-size:25px;font-family:'Titillium Web', sans-serif;">
+    <a href = "settings.html"><b>xlogin00</b></a>
+    </div>
+    <br>
+    <div>
+      <form action="index.html">
+      <input type="submit" style="background-color:#404040;color:#ff6600;" value="LOGOUT" />
+      </form>
+    </div>
+
+    <h2>Date:</h2>
+    <div id="date"></div>
+    <h2>Lists:</h2>
+    <div class="content">
+        <ul id="sidebar_list">
+            <li class="sidebar_item" >
+                    <p class="text" job="sideButton" id="0"> default </p>
+            </li>
+
+        </ul>
+        <div class="add-sidebar_item">
+        <input type="text" id="sideInput" placeholder="Add next item">
+        </div>
+        <div class="add-sidebar_item">
+        <img id="plusSidebar" src="icons/plus-circle.svg" alt ="plus" class ="icon">
+        </div>
+
+
+
+
+    </div>
+
+
+  </div>
+  <div class="main">
+    <div class="content">
+      <ul id="list">
+
+      </ul>
+      <div class="add-item">
+        <img id="plusTodo" src="icons/plus-circle.svg" alt ="plus" class ="icon">
+        <input type="text" id="input" placeholder="Add next item">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>ITU: xjurka08, xkremp01, xkrejc68</h2>
+</div>
+ <script type="text/javascript" src="js/app.js"></script>
+</body>
